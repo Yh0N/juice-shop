@@ -11,6 +11,7 @@
   <meta name="description" content="Probably the most modern and sophisticated insecure web application">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link id="favicon" rel="icon" type="image/x-icon" href="assets/public/favicon_js.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
     window.addEventListener("load", function(){
       window.cookieconsent.initialise({
@@ -25,6 +26,99 @@
   </script>
 </head>
 <body class="mat-app-background mat-typography bluegrey-lightgreen-theme">
+  <!-- Premium Project Badge -->
+  <div id="project-badge" class="premium-badge">
+    <div class="badge-header">
+      <i class="fas fa-graduation-cap badge-icon"></i>
+      <span class="badge-title">Proyecto Seguridad</span>
+    </div>
+    <div class="badge-content">
+      <div class="info-row"><strong>Integrante 1:</strong> Jhon Fredy Moran </div>
+      <div class="info-row"><strong>Integrante Codigo 1:</strong> 826720 </div>
+      <div class="info-row"><strong>Integrante 2:</strong> Nelson Barrera </div>
+      <div class="info-row"><strong>Integrante Codigo 2:</strong> 835109 </div>
+      <div class="info-row"><strong>Programa:</strong> Ing. Software</div>
+      <div class="info-row"><strong>Asignatura:</strong> Seguridad Inf.</div>
+    </div>
+  </div>
+
+  <style>
+    .premium-badge {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10000;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 12px 20px;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      max-width: 200px;
+      max-height: 40px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .premium-badge:hover {
+      max-width: 300px;
+      max-height: 300px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .badge-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      white-space: nowrap;
+    }
+
+    .badge-icon {
+      font-size: 20px;
+    }
+
+    .badge-title {
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-content {
+      margin-top: 15px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .premium-badge:hover .badge-content {
+      opacity: 1;
+    }
+
+    .info-row {
+      margin-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 4px;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    /* Dark mode adjustments if needed */
+    .bluegrey-lightgreen-theme .premium-badge {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+
   <app-root></app-root>
 </body>
 </html>
